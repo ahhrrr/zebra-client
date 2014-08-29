@@ -28,7 +28,7 @@ app.post '/print', (req, res) ->
     console.log label
     lpr = child_process.spawn "bash", ['-c', "cat > label"]
   else
-    lpr = child_process.spawn "lpr", ['-P', process.env.ZEBRA_PRINT_QUEUE_NAME, '-o', 'raw']
+    lpr = child_process.spawn "lp", ['-d', process.env.ZEBRA_PRINT_QUEUE_NAME, '-o', 'raw']
 
   lpr.stdin.write(label)
   lpr.on 'close', (code) ->
