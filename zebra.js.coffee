@@ -30,7 +30,11 @@ app.post '/print', (req, res) ->
   else
     lpr = child_process.spawn "lp", ['-d', process.env.ZEBRA_PRINT_QUEUE_NAME, '-o', 'raw']
 
+# pipe child process output to script output
+  lpr.stdout.pipe(process.stdout);
+
   lpr.stdin.write(label)
+  lpr.stdin.end()
   lpr.on 'close', (code) ->
     console.log "Child process exit with code #{code}" if DEBUG
   res.send('Added to print queue.')
