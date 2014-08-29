@@ -6,8 +6,8 @@
   "dependencies": {
     "dotenv": "~0.2.4",
     "request": "~2.33.0",
-    "node-easypost": "~2.0.4",
-    "pusher-node-client": "0.0.8",
-    "coffee-script": "~1.7.1"
+    "express": "~4.8.6",
+    "coffee-script": "~1.7.1",
+    "body-parser": "~1.6.6"
   }
 }
