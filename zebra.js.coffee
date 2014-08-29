@@ -11,6 +11,7 @@ child_process = require('child_process')
 fs = require('fs')
 request = require('request')
 express = require('express')
+cors = require('cors')
 bodyParser = require('body-parser')
 
 app = express()
@@ -18,6 +19,7 @@ app.use(bodyParser.urlencoded(
   extended: true
 ))
 app.use(bodyParser.json())
+app.use(cors())
 
 DEBUG = (process.argv[2] == 'debug')
 console.log "Running in debug mode" if DEBUG
@@ -39,5 +41,5 @@ app.post '/print', (req, res) ->
     console.log "Child process exit with code #{code}" if DEBUG
   res.send('Added to print queue.')
 
-app.listen(3000)
+app.listen(4000)
 
