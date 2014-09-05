@@ -7,6 +7,8 @@
 dotenv = require('dotenv')
 dotenv.load()
 
+console.log "starting server..."
+console.log "print queue: ", process.env.ZEBRA_PRINT_QUEUE_NAME
 child_process = require('child_process')
 fs = require('fs')
 request = require('request')
