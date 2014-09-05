@@ -54,14 +54,14 @@
 # MIN_UPTIME="5000"
 # SPIN_SLEEP_TIME="2000"
  
-NAME="zebra-client"
-NODE_BIN_DIR="/usr/local/bin"
-NODE_PATH="/usr/local/lib/node_modules"
-APPLICATION_PATH="/home/pi/zebra-client/zebra.js.coffee"
-PIDFILE="/var/run/zebra-client.pd"
-LOGFILE="/var/log/zebra-client.log"
-MIN_UPTIME="5000"
-SPIN_SLEEP_TIME="2000"
+export NAME="zebra-client"
+export NODE_BIN_DIR="/usr/local/bin"
+export NODE_PATH="/usr/local/lib/node_modules"
+export APPLICATION_PATH="/home/pi/zebra-client/zebra.js.coffee"
+export PIDFILE="/var/run/zebra-client.pid"
+export LOGFILE="/var/log/zebra-client.log"
+export MIN_UPTIME="5000"
+export SPIN_SLEEP_TIME="2000"
  
 # Add node to the path for situations in which the environment is passed.
 PATH=$NODE_BIN_DIR:$PATH
