@@ -20,8 +20,8 @@
         <string>co.othermachine.zebra-client</string>
         <key>ProgramArguments</key>
         <array>
-          <string>/usr/bin/touch</string>
-          <string>/Users/omc1/zebra-client/hello</string>
+            <string>/usr/local/bin/coffee</string>
+            <string>/Users/omc1/zebra-client/zebra.js.coffee</string>
         </array>
         <key>RunAtLoad</key>
         <true/>
