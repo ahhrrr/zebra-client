@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>KeepAlive</key>
+        <dict>
+            <key>SuccessfulExit</key>
+            <false/>
+        </dict>
+        <key>Label</key>
+        <string>co.othermachine.zebra-client</string>
+        <key>ProgramArguments</key>
+        <array>
+            <string>/usr/local/bin/forever</string>
+            <string>-a</string>
+            <string>-l /var/log/zebra-client/zebra-client.log</string>
+            <string>--minUptime 5000</string>
+            <string>--spinSleepTime 2000</string>
+            <string>-c coffee </string>
+            <string>/Users/omc1/zebra-client/zebra.js.coffee</string>
+        </array>
+        <key>RunAtLoad</key>
+        <true/>
+        <key>StartInterval</key>
+        <integer>3600</integer>
+    </dict>
+</plist>
