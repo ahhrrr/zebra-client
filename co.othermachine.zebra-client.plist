@@ -23,5 +23,14 @@
         <true/>
         <key>StartInterval</key>
         <integer>3600</integer>
+      <key>EnvironmentVariables</key>
+      <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin/:$PATH</string>
+        <key>ZEBRA_PRINT_QUEUE_NAME</key>
+        <string>Zebra_Technologies_ZTC_GK420t</string>
+      </dict>
+      <key>WorkingDirectory</key>
+      <string>/Users/omc1/zebra-client</string>
     </dict>
 </plist>
