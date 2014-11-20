@@ -16,7 +16,7 @@
             <string>-l /var/log/zebra-client/zebra-client.log</string>
             <string>--minUptime 5000</string>
             <string>--spinSleepTime 2000</string>
-            <string>-c coffee </string>
+            <string>-c /usr/local/bin/coffee </string>
             <string>/Users/omc1/zebra-client/zebra.js.coffee</string>
         </array>
         <key>RunAtLoad</key>
