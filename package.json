@@ -9,6 +9,7 @@
     "express": "~4.8.6",
     "coffee-script": "~1.7.1",
     "body-parser": "~1.6.6",
-    "cors": "~2.4.1"
+    "cors": "~2.4.1",
+    "node-mac": "0.1.3"
   }
 }
