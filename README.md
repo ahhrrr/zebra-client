@@ -7,6 +7,31 @@ We use this at yerdle to print labels for shipments.
 
 [Read this blog post for background and usage details.](http://codesmaller.com/just-in-time-shipping-at-yerdle/)
 
+## Steps to configure Zebra Printer 
+- Plug it into computer
+- Go to localhost:631 in a browser. In the browser, you may see message: if cups hasn't been enabled, run the command line (cupsctl WebInterface=yes. Do that if message exists.
+- Reload webpage
+- Go to Administration, Add Printer 
+- Enter admin acct. of machine
+-   Choose from a list of printers (Zebra in this case)
+-   Share printer
+-   Select Raw for Make 
+-   Continue
+-   Raw Queue (en) for model
+-   Click: add printer
+-   Set default options   
+
+### Test 
+- git clone zebraclient (from OMCO account)
+- npm install in zebra client
+- Test locally:
+  - Grab the Queue Name from Printers
+  - ``` ZEBRA_PRINT_QUEUE_NAME=<name> node zebra.js ```
+  - If you're moving the printer to a new machine, change the otherbom environment variable PRINTER_ENDPOINT to be the new IP
+
+### Launch
+- Create a launch script for OSX and launch is (see below)
+
 ## Launching the zebra client on OSX
 
 ### Generate and load a plist file on mac
