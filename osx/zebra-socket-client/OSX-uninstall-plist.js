@@ -2,7 +2,7 @@ var Service = require('node-mac').Service;
 
 // Create a new service object
 var svc = new Service({
-  name:'Zebra Printer Web Server',
+  name:'Zebra Printer Web Socket',
   script: process.env.SCRIPT_PATH + 'zebra-socket-client.js',
 });
 
