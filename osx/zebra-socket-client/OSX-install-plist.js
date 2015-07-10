@@ -12,13 +12,7 @@ var svc = new Service({
   grow: .5,
   env: {
     name: 'ZEBRA_PRINT_QUEUE_NAME',
-    value: 'Zebra_Technologies_ZTC_GK420t',
-    name: 'PUSHER_APP_SECRET',
-    value: process.env.PUSHER_APP_SECRET,
-    name: 'PUSHER_APP_KEY',
-    value: process.env.PUSHER_APP_KEY,
-    name: 'PUSHER_APP_SECRET',
-    value: process.env.PUSHER_APP_SECRET
+    value: 'Zebra_Technologies_ZTC_GK420t'
   }
 });
 

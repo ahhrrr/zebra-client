@@ -20,9 +20,6 @@ We use this at yerdle to print labels for shipments.
 
 ## Launching the zebra client on OSX
 
-### Set environment variables
-export KEY=value
-
 ### Generate and load a plist file on mac
 Install dependencies with npm install. This installs node-mac (https://github.com/coreybutler/node-mac) which is used to generate the plist file and place it in /Library/LaunchDaemons folder.
 
