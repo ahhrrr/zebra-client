@@ -41,7 +41,7 @@ pusher_client.on('connect', function() {
       console.log(label);
       lpr = child_process.spawn("bash", ['-c', "cat > label"]);
     } else {
-      // lpr = child_process.spawn("lpr", ['-P', process.env.ZEBRA_PRINT_QUEUE_NAME, '-o', 'raw']);
+      lpr = child_process.spawn("lpr", ['-P', process.env.ZEBRA_PRINT_QUEUE_NAME, '-o', 'raw']);
     }
 
     lpr.stdout.pipe(process.stdout);
