@@ -57,7 +57,7 @@ pusher_client.on('connect', function() {
       }
     });
 
-    return res.send('Added to print queue.');
+    console.log('added to print queue');
   });
 });
 
