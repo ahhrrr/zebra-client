@@ -34,10 +34,10 @@ pres = null;
 pusher_client.on('connect', function() {
   console.log('pusher_client has connected to heroku web server');
 
-  pres = pusher_client.subscribe("prints");
+  pres = pusher_client.subscribe('prints');
   console.log('pusher_client has subscribed to prints');
 
-  return pres.on('new', function(data) {
+  return pres.on('print', function (data) {
     var label = data.label;
     var lpr;
 
