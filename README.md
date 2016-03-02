@@ -7,6 +7,17 @@ We use this at yerdle to print labels for shipments.
 
 [Read this blog post for background and usage details.](http://codesmaller.com/just-in-time-shipping-at-yerdle/)
 
+### Troubleshooting
+The follow items are possible actions to fix a printer issue in OtherMRP.
+- Make sure the printer is plugged in, turned on and connected to the USB router.
+- If the printer is not working, first try restarting the computer that it is hosted on.
+- If the above steps don't work, try uninstalling and reinstalling the daemon (instructions here in this README.md file)
+- If this doesn't work, try reinstalling the printer (instructions here in this README.md file)
+
+Helpful tools for diagnosing an issue: On the computer that the Zebra app lives, open the Console app and navigate to "Files" > "/Library/Logs" > "Zebra Printer Web Socket"
+and view the logs. The error log file should be empty. The regular log file should update with pings and pongs from Pusher if it is connected. If there is text in the error log, then the daemon likely
+crashed and should be restarted. However, it should restart upon a restart of the computer.
+
 ### Test
 - git clone zebraclient (from OMCO account)
 - npm install in zebra client
@@ -16,7 +27,7 @@ We use this at yerdle to print labels for shipments.
   - If you're moving the printer to a new machine, change the otherbom environment variable PRINTER_ENDPOINT to be the new IP
 
 ### Launch
-- Create a launch script for OSX and launch is (see below)
+- Create a launch script for OSX and launch it (see below)
 
 ## Launching the zebra client on OSX
 
